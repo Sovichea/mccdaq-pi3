@@ -10,3 +10,8 @@ The programming languages taken into cosideration in the project is C++ and Pyth
 The second method is preferable, since it align with our project goal and can speed up the development process for the GUI, as well as making it easy to interface with external devices such as OpenDAQ which already has its library written in python.
 
 ## 2. OpenDAQ Interface
+
+## References
+* Installing Qt Creator on RPi: http://helloraspberrypi.blogspot.fr/2016/03/install-qt5qt-creator-for-raspberry-pi.html
+* RPi GUI tutorial: https://www.baldengineer.com/raspberry-pi-gui-tutorial.html
+* OpenDAQ usage in Python: http://opendaq-python.readthedocs.io/en/latest/usage.html
