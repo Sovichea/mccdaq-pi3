@@ -1,0 +1,6 @@
+Week1(13/11 - 19/11):
+  - Install Qt5/Qt Creator to start making the interface.
+Week2(20/11 - 26/11):
+  - Make a sample interface and test with serial communication.
+Week3(27/11 - 3/12):
+  - Test and adjust the interface to communicate with DAQ
