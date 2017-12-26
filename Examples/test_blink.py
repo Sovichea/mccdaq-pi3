@@ -3,7 +3,7 @@ from ctypes import *
 
 VID = 0x09db
 PID = 0x0082
-BLINK_LED = c_char_p(0x40)
+BLINK_LED = c_byte(0x40)
 
 with usb1.USBContext() as context:
     handle = context.openByVendorIDAndProductID(VID, PID, skip_on_error = True,)
