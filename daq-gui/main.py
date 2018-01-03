@@ -78,7 +78,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 	def plot_graph(self):
 		self.p.clear()
 		for i in range(0, len(self.selected_chan)):
-			value = self.mcc.usbAIn(i, self.gain[self.selected_chan[i]])
+			value = self.mcc.usbAIn(self.selected_chan[i], self.gain[self.selected_chan[i]])
 			if self.gain[self.selected_chan[i]] < SE_10_00V:
 				self.data[i][self.count] = self.mcc.volts_FS(self.gain[self.selected_chan[i]], value)
 			else:
@@ -87,7 +87,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 		self.count += 1
         
 	def readParams(self):
-		
+		self.sample_rate = int(self.lineEdit_sample_rate.text())
 		if self.tabWidget.currentIndex() == 0:
 			self.gain = SE_10_00V*np.ones(8,dtype=int)
 			self.chan[0] = self.checkBox_chan0.isChecked()
@@ -134,7 +134,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 					self.data.append(np.zeros(10000))
 					self.selected_chan.append(i)
 			self.mcc.usbOpen()
-			self.timer.start(100)
+			self.timer.start(self.sample_rate)
 			
 	def accepted(self):
 		print("accepted")
@@ -148,7 +148,7 @@ class MainWindow(QtGui.QMainWindow, Ui_MainWindow):
 					self.data.append(np.zeros(10000))
 					self.selected_chan.append(i)
 		self.mcc.usbOpen()
-		self.timer.start(100)
+		self.timer.start(self.sample_rate)
 
 def main():
 	app = QtGui.QApplication(sys.argv)
