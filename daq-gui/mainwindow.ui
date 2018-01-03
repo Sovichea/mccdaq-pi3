@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MCC DAQ Monitor</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout" columnstretch="1,3">
+    <item row="1" column="0" rowspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Sample rate :</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_sample_rate">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="maxLength">
+           <number>5</number>
+          </property>
+          <property name="frame">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>ms</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Expanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="tab_single">
+         <attribute name="title">
+          <string>Single Ended</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="title">
+             <string>Select ADC Channel(s): 0 - 10V</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="2" column="1">
+              <widget class="QCheckBox" name="checkBox_chan5">
+               <property name="text">
+                <string>A5 (Pin 8)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QCheckBox" name="checkBox_chan0">
+               <property name="text">
+                <string>A0 (Pin 1)</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QCheckBox" name="checkBox_chan1">
+               <property name="text">
+                <string>A1 (Pin 2)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QCheckBox" name="checkBox_chan3">
+               <property name="text">
+                <string>A3 (Pin 5)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QCheckBox" name="checkBox_chan4">
+               <property name="text">
+                <string>A4 (Pin 7)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QCheckBox" name="checkBox_chan2">
+               <property name="text">
+                <string>A2 (Pin 4)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QCheckBox" name="checkBox_chan6">
+               <property name="text">
+                <string>A6 (Pin 10)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QCheckBox" name="checkBox_chan7">
+               <property name="text">
+                <string>A7 (Pin 11)</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_diff">
+         <attribute name="title">
+          <string>Differential</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="title">
+             <string>Select ADC Channel-Gain Pair(s):</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="3" column="0">
+              <widget class="QCheckBox" name="checkBox_chan32">
+               <property name="text">
+                <string>A2 - A3</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QCheckBox" name="checkBox_chan76">
+               <property name="text">
+                <string>A6 - A7</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QCheckBox" name="checkBox_chan54">
+               <property name="text">
+                <string>A4 - A5</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QCheckBox" name="checkBox_chan10">
+               <property name="text">
+                <string>A0 - A1</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="comboBox_gain_1">
+               <item>
+                <property name="text">
+                 <string>+/-20V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-10V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-5V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-4V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-2.5V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-2V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-1.25V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-1V</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QComboBox" name="comboBox_gain_2">
+               <item>
+                <property name="text">
+                 <string>+/-20V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-10V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-5V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-4V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-2.5V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-2V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-1.25V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-1V</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QComboBox" name="comboBox_gain_3">
+               <item>
+                <property name="text">
+                 <string>+/-20V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-10V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-5V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-4V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-2.5V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-2V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-1.25V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-1V</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QComboBox" name="comboBox_gain_4">
+               <item>
+                <property name="text">
+                 <string>+/-20V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-10V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-5V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-4V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-2.5V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-2V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-1.25V</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>+/-1V</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Plot interval:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>X:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_tmin">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="maxLength">
+           <number>5</number>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>to</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_tmax">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="maxLength">
+           <number>5</number>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_time">
+          <item>
+           <property name="text">
+            <string>s</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ms</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>us</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Y:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_ymin">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="maxLength">
+           <number>5</number>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>to</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_ymax">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>80</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="maxLength">
+           <number>5</number>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_y">
+          <item>
+           <property name="text">
+            <string>V</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>mV</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>uV</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QPushButton" name="pushButton_start">
+          <property name="text">
+           <string>Start</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_stop">
+          <property name="text">
+           <string>Stop</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="label_title">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="text">
+       <string>Plot Title</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" rowspan="3">
+     <widget class="PlotWidget" name="plotWidget"/>
+    </item>
+    <item row="4" column="1">
+     <widget class="QCheckBox" name="checkBox_roi">
+      <property name="text">
+       <string>Enable Region of Interest (ROI)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" rowspan="2">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+   <zorder>verticalSpacer</zorder>
+   <zorder>plotWidget</zorder>
+   <zorder>label_title</zorder>
+   <zorder>checkBox_roi</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>lineEdit_sample_rate</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>checkBox_chan0</tabstop>
+  <tabstop>checkBox_chan1</tabstop>
+  <tabstop>checkBox_chan2</tabstop>
+  <tabstop>checkBox_chan3</tabstop>
+  <tabstop>checkBox_chan4</tabstop>
+  <tabstop>checkBox_chan5</tabstop>
+  <tabstop>checkBox_chan6</tabstop>
+  <tabstop>checkBox_chan7</tabstop>
+  <tabstop>checkBox_chan10</tabstop>
+  <tabstop>comboBox_gain_1</tabstop>
+  <tabstop>checkBox_chan32</tabstop>
+  <tabstop>comboBox_gain_2</tabstop>
+  <tabstop>checkBox_chan54</tabstop>
+  <tabstop>comboBox_gain_3</tabstop>
+  <tabstop>checkBox_chan76</tabstop>
+  <tabstop>comboBox_gain_4</tabstop>
+  <tabstop>lineEdit_tmin</tabstop>
+  <tabstop>lineEdit_tmax</tabstop>
+  <tabstop>comboBox_time</tabstop>
+  <tabstop>lineEdit_ymin</tabstop>
+  <tabstop>lineEdit_ymax</tabstop>
+  <tabstop>comboBox_y</tabstop>
+  <tabstop>pushButton_start</tabstop>
+  <tabstop>pushButton_stop</tabstop>
+  <tabstop>plotWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
