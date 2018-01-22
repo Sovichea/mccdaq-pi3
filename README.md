@@ -22,6 +22,13 @@ You should be able to enter the SSH screen as shown below.
 
 In case you get an error saying unable to connect, it indicates that SSH was not enable on your Raspberry Pi. The quickest way to enable SSH feature is to plug the Raspberry Pi SD Card to your PC and create an empty file on the root folder called "ssh" without extension, then boot your Raspberry Pi again. This time it should work.
 
+**Note:** Some PC may not recognize the IP name *"raspberrypi.local"*; therefore, you need to manually find the IP Address from Windows command prompt and type 
+```
+ipconfig
+```
+Then search for Raspberry Pi IP Address in the Ethernet Adpater section.
+
+
 Next we login to Raspberry Pi using default logins: *"pi"* for the username and *"raspberry"* for the password. You should be able to see the terminal shown below:
 
 **![image_here]**
@@ -29,12 +36,16 @@ Next we login to Raspberry Pi using default logins: *"pi"* for the username and 
 Next, to start VNC server, we type in the command
 
 ```
-> sudo raspi-config
+sudo raspi-config
 ```
 
-Then select *Interfacing Option*, *Enable VNC*. Then restart the Rapsberry Pi.
+Then select *Interfacing Option*, *Enable VNC*. Then restart the Rapsberry Pi and close Putty.
 
+Finally, you need to install and run Real VNC Viewer (https://www.realvnc.com/en/connect/download/viewer/windows/). You might to sign up to get the free version. Once the Viewer is opened, type in the same IP as in Putty and press Enter.
 
+![vnc_viewer](https://github.com/Sovichea/mccdaq-pi3/blob/master/images/vnc_viewer.PNG)
+
+You should now able to see to your Raspberry Pi desktop by using the same login as above.
 
 ## References
 * Installing Qt Creator on RPi: http://helloraspberrypi.blogspot.fr/2016/03/install-qt5qt-creator-for-raspberry-pi.html
