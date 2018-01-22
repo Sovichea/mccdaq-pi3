@@ -16,11 +16,11 @@ mccdaq-pi3
 |   |   mcc_libusb.py
 |   |   Readme.md
 |   |   roi_window.ui
-|   |   roi_window_ui.py   
+|   \   roi_window_ui.py   
 |           
 +---Examples (An example for the communication protocol between python and MCC-USB1208FS through libusb library)
-|       Readme.md
-|       test_blink.py
+|   |   Readme.md
+|   \   test_blink.py
 |       
 +---images
 |       
@@ -28,7 +28,7 @@ mccdaq-pi3
     |   61-mcc.rules
     |   mcc_libusb.py
     |   Readme.md
-    |   test-usb1208FS.py
+    \   test-usb1208FS.py
         
 ```
 
