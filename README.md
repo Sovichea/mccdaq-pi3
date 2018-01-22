@@ -48,6 +48,32 @@ Finally, you need to install and run Real VNC Viewer (https://www.realvnc.com/en
 You should now able to see to your Raspberry Pi desktop by using the same login as above.
 
 ## Setup PyQt Development Environment
+Before setting up the environment, you should make sure that the Raspberry Pi runs with the latest update. So, first connect Raspberry Pi to the internet. If you are using Rapsberry Pi 3+, you can connect to the internet through WiFi, but for the lower version, you can only use the USB tethering due to Ethernet port is being used to handle remote desktop. 
+
+Once connected to the internet, open the terminal window and type in the command:
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+This should take some times depending on your internet connection and how many software you had on the Raspberry Pi. After the update is complete type in
+```
+sudo apt-get install python3-pyqt4 python3-pyqtgraph libusb-1.0-0
+sudo pip3 libusb1
+```
+After this, go to `mccdaq-pi3/py-mcclib` and run the following command:
+```
+sudo cp 61-mcc.rules /etc/udev/rules.d/99-mcc.rules
+```
+This modify the rule for the USB so that our software can be access the USB port without root permission. This is the minimum setup that you need in order to run the GUI in this project. To run the program, go to `mccdaq-pi3/daq-gui/` folder and type 
+```
+python3 main.py
+```
+
+Next, if you want to install a complete development enviroment install the following package:
+```
+sudo apt-get install qtcreator qt4-default pyqt4-dev-tools
+```
+After this, you're ready to develop your own GUI to communicate with DAQ MCC-USB1208FS or other variants with some modification. You can follow the complete guide through the Wiki in this Github https://github.com/Sovichea/mccdaq-pi3/wiki.
 
 ## References
 * Installing Qt Creator on RPi: http://helloraspberrypi.blogspot.fr/2016/03/install-qt5qt-creator-for-raspberry-pi.html
