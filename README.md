@@ -47,6 +47,8 @@ Finally, you need to install and run Real VNC Viewer (https://www.realvnc.com/en
 
 You should now able to see to your Raspberry Pi desktop by using the same login as above.
 
+## Setup PyQt Development Environment
+
 ## References
 * Installing Qt Creator on RPi: http://helloraspberrypi.blogspot.fr/2016/03/install-qt5qt-creator-for-raspberry-pi.html
 * RPi GUI tutorial: https://www.baldengineer.com/raspberry-pi-gui-tutorial.html
