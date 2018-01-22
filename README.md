@@ -32,7 +32,7 @@ mccdaq-pi3
         
 ```
 
-**Remark:** The above python library is developped in Python with the reference to C library developped by Measurement Computing (https://github.com/Sovichea/Linux_Drivers). More detail to how the library is developped and what method is used, can be found in this Wiki: https://github.com/Sovichea/mccdaq-pi3/wiki
+**Remark:** The above library is developped in Python with the reference to C library developped by Measurement Computing (https://github.com/Sovichea/Linux_Drivers). More detail to how the library is developped and what method is used, can be found in this Wiki: https://github.com/Sovichea/mccdaq-pi3/wiki
 
 # Instrumentation of DAQ MCC-USB1208FS using RPi 3
 The purpose of this project is to create a user interface using a RaspberryPi 3 in order to stream data from OpenDAQ. OpenDAQ data acquisition device is used to read the analog voltage from the photodiode.
