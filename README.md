@@ -77,7 +77,7 @@ sudo raspi-config
 
 Then select *Interfacing Option*, *Enable VNC*. Then restart the Rapsberry Pi and close Putty.
 
-Finally, you need to install and run Real VNC Viewer (https://www.realvnc.com/en/connect/download/viewer/windows/). You might to sign up to get the free version. Once the Viewer is opened, type in the same IP as in Putty and press Enter.
+Finally, you need to install and run Real VNC Viewer (https://www.realvnc.com/en/connect/download/viewer/windows/). You might need to sign up to get the free version. Once the Viewer is opened, type in the same IP as in Putty and press Enter.
 
 ![vnc_viewer](https://github.com/Sovichea/mccdaq-pi3/blob/master/images/vnc_viewer.PNG)
 
