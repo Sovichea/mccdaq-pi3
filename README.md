@@ -119,5 +119,5 @@ After this, you're ready to develop your own GUI to communicate with DAQ MCC-USB
 * Installing Qt Creator on RPi: http://helloraspberrypi.blogspot.fr/2016/03/install-qt5qt-creator-for-raspberry-pi.html
 * RPi GUI tutorial: https://www.baldengineer.com/raspberry-pi-gui-tutorial.html
 * Installing MCC C drivers in Raspberry Pi: https://www.mccdaq.com/TechTips/TechTip-9.aspx
-* Measurement Computing C drivers: https://github.com/Sovichea/Linux_Drivers
+* Measurement Computing C drivers: https://github.com/wjasper/Linux_Drivers
 * Pyqtgraph python package used in the program: http://pyqtgraph.org/
