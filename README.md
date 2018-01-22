@@ -1,3 +1,38 @@
+# Directory Tree and Description
+```
+mccdaq-pi3
+|   Goals_Timeline
+|   Interface Requirements
+|   README.md
+|   
++---daq-gui (This folder contains all the files used to run and modify the program)
+|   |   dialog.ui
+|   |   dialog_ui.py
+|   |   gui_image_1.PNG
+|   |   gui_image_2.PNG
+|   |   main.py
+|   |   mainwindow.ui
+|   |   mainwindow_ui.py
+|   |   mcc_libusb.py
+|   |   Readme.md
+|   |   roi_window.ui
+|   |   roi_window_ui.py   
+|           
++---Examples (An example for the communication protocol between python and MCC-USB1208FS through libusb library)
+|       Readme.md
+|       test_blink.py
+|       
++---images
+|       
+\---py-mcclib (A custom library, developped in Python, used to communicate with MCC-USB120FS)
+    |   61-mcc.rules
+    |   mcc_libusb.py
+    |   Readme.md
+    |   test-usb1208FS.py
+        
+```
+**Remark: ** The above python library is developped in Python with the reference to C library developped by Measurement Computing (https://github.com/Sovichea/Linux_Drivers). More detail to how the library is developped and what method is used, can be found in this Wiki: https://github.com/Sovichea/mccdaq-pi3/wiki
+
 # Instrumentation of DAQ MCC-USB1208FS using RPi 3
 The purpose of this project is to create a user interface using a RaspberryPi 3 in order to stream data from OpenDAQ. OpenDAQ data acquisition device is used to read the analog voltage from the photodiode.
 
