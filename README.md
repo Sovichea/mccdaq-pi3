@@ -75,6 +75,10 @@ sudo apt-get install qtcreator qt4-default pyqt4-dev-tools
 ```
 After this, you're ready to develop your own GUI to communicate with DAQ MCC-USB1208FS or other variants with some modification. You can follow the complete guide through the Wiki in this Github https://github.com/Sovichea/mccdaq-pi3/wiki.
 
+**Quick tip:** While using VNC Viewer, you can quickly transfer files between Windows PC and Raspberry Pi using any FTP Client. In our case, we use FileZilla and fill in the same logins as above.
+
+![filezilla](https://github.com/Sovichea/mccdaq-pi3/blob/master/images/filezilla.PNG)
+
 ## References
 * Installing Qt Creator on RPi: http://helloraspberrypi.blogspot.fr/2016/03/install-qt5qt-creator-for-raspberry-pi.html
 * RPi GUI tutorial: https://www.baldengineer.com/raspberry-pi-gui-tutorial.html
