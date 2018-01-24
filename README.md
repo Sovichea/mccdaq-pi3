@@ -98,7 +98,7 @@ sudo apt-get upgrade
 This should take some times depending on your internet connection and how many software you had on the Raspberry Pi. After the update is complete type in
 ```
 sudo apt-get install python3-pyqt4 python3-pyqtgraph libusb-1.0-0
-sudo pip3 libusb1
+sudo pip3 install libusb1
 ```
 After this, go to `mccdaq-pi3/py-mcclib` and run the following command:
 ```
