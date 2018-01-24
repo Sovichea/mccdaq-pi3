@@ -54,7 +54,7 @@ By default, Raspberry Pi should comes with the VNC server installed. To make sur
 
 You should be able to enter the SSH screen as shown below.
 
-**![image_here]**
+![ssh_login](https://github.com/Sovichea/mccdaq-pi3/blob/master/images/putty_1.PNG)
 
 In case you get an error saying unable to connect, it indicates that SSH was not enable on your Raspberry Pi. The quickest way to enable SSH feature is to plug the Raspberry Pi SD Card to your PC and create an empty file on the root folder called "ssh" without extension, then boot your Raspberry Pi again. This time it should work.
 
@@ -67,7 +67,7 @@ Then search for Raspberry Pi IP Address in the Ethernet Adpater section.
 
 Next we login to Raspberry Pi using default logins: *"pi"* for the username and *"raspberry"* for the password. You should be able to see the terminal shown below:
 
-**![image_here]**
+![pi_terminal](https://github.com/Sovichea/mccdaq-pi3/blob/master/images/putty_2.PNG)
 
 Next, to start VNC server, we type in the command
 
@@ -82,6 +82,10 @@ Finally, you need to install and run Real VNC Viewer (https://www.realvnc.com/en
 ![vnc_viewer](https://github.com/Sovichea/mccdaq-pi3/blob/master/images/vnc_viewer.PNG)
 
 You should now able to see to your Raspberry Pi desktop by using the same login as above.
+
+![pi_desktop](https://github.com/Sovichea/mccdaq-pi3/blob/master/images/rpi_desktop.PNG)
+
+Now, you have successfully access your Rapsberry Pi with the most minimal setup possible and can start working with it.
 
 ## Setup PyQt Development Environment
 Before setting up the environment, you should make sure that the Raspberry Pi runs with the latest update. So, first connect Raspberry Pi to the internet. If you are using Rapsberry Pi 3+, you can connect to the internet through WiFi, but for the lower version, you can only use the USB tethering due to Ethernet port is being used to handle remote desktop. 
