@@ -95,6 +95,7 @@ class USB1208FS(object):
 			if self.handle.kernelDriverActive(i):
 				self.handle.detachKernelDriver(i)
 			self.handle.claimInterface(i)
+		return self.handle
 
 	def usbClose(self):
 		self.handle.clearHalt(usb1.ENDPOINT_IN | 1)

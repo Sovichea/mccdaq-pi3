@@ -72,7 +72,7 @@ class Ui_Form_roi(object):
         self.graphicsView = PlotWidget(Form_roi)
         self.graphicsView.setObjectName(_fromUtf8("graphicsView"))
         self.verticalLayout.addWidget(self.graphicsView)
-
+		
         self.retranslateUi(Form_roi)
         QtCore.QMetaObject.connectSlotsByName(Form_roi)
 

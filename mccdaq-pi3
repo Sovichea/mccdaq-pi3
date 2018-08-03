@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=mccdaq-pi3
+Comment=My application which does this
+Icon=/usr/share/pixmaps/openbox.xpm
+Exec=python3 /home/pi/mccdaq-pi3/daq-gui/main.py
+Type=Application
+Encoding=UTF-8
+Terminal=false
+Categories=None;
